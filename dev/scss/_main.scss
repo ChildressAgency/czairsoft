@@ -9,6 +9,32 @@ body{
   font-weight: $font-weight-black;
 }
 
+h1{
+  font-family: $font-family-alt;
+  font-size: 112px;
+  text-transform: uppercase;
+}
+h2{
+  font-family: $font-family-alt;
+  font-size: 100px;
+  text-transform: uppercase;
+}
+h3{
+  font-family: $font-family-alt;
+  font-size: 54px;
+  text-transform: uppercase;
+}
+h4{
+  font-family: $font-family-alt;
+  font-size: 46px;
+}
+
+@include media-breakpoint-only(xs){
+  h2{
+    font-size: 62px;
+  }
+}
+
 a{
   transition: all .2s ease;
 }

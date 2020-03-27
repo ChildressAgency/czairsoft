@@ -44,31 +44,29 @@
     margin-bottom: 40px;
 
     h2{
-      font-size: 100px;
-      font-weight: $font-weight-bold;
       color: $color-alt;
       line-height: 1em;
 
       span{
         display: block;
+        font-weight: $font-weight-bold;
       }
     }
   }
 
   h3{
-    font-size: 54px;
     color: $color-alt;
   }
 
   article{
     margin-top: 25px;
   }
+}
 
-  @include media-breakpoint-only(xs){
-    .welcome-header{
-      h2{
-        font-size: 62px;
-      }
-    }
+#duty-calls{
+  text-align: center;
+
+  h3{
+    color: $color-alt;
   }
 }
