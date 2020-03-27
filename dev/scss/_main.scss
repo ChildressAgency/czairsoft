@@ -39,6 +39,23 @@ a{
   transition: all .2s ease;
 }
 
+.btn-main{
+  display: inline-block;
+  color: #fff;
+  font-weight: $font-weight-semibold;
+  padding: 5px 60px;
+  border: 2px solid #fff;
+  background-color: transparent;
+
+  &:hover,
+  &:focus{
+    color: #fff;
+    text-decoration: none;
+    border-color: $color-main;
+    background-color: $color-main;
+  }
+}
+
 section{
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,6 +71,10 @@ section{
   left: 0;
   background-color: rgba(0, 0, 0, .3);
   z-index: 1;
+
+  &.dark-overlay{
+    background-color: rgba(0, 0, 0, .6);
+  }
 }
 
 .chevron{

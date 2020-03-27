@@ -15,12 +15,14 @@
 * bootstrap scss files
 *******************************/
 @import "includes/bootstrap";
+@import "includes/aos";
 
 /******************************
 * main scss file with gobal
 * styles
 ******************************/
 @import "main";
+@import "includes/flip-card";
 
 /*******************************
 * scss partial files
