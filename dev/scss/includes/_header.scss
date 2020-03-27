@@ -7,10 +7,11 @@
     display: flex;
     align-items: center;
 
-    span{
+    .site-title{
       margin-left: 15px;
       font-size: 60px;
       color: $color-main;
+      line-height: 1em;
     }
 
     &:hover,
@@ -20,14 +21,23 @@
   }
 
   .nav-item{
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    & + .nav-item{
+      margin-left: 15px;
+    }
+
     .nav-link{
       color: #fff;
       font-size: 20px;
       font-weight: $font-weight-bold;
       text-transform: uppercase;
       position: relative;
+      line-height: 1.2em;
 
-      &::before{
+      /*&::before{
         content: "\005b";
         color: $color-main;
         opacity: 0;
@@ -57,6 +67,69 @@
       &::after{
         opacity: 1;
       }
+    }*/
+
+      &::before,
+      &::after{
+        content: "";
+        position: absolute;
+        top: 8px;
+        bottom: 8px;
+        width: 7px;
+        border: 3px solid $color-main;
+        opacity: 0;
+        transition: all .3s ease;
+      }
+
+      &::before{
+        left: -10px;
+        border-right: none;
+      }
+      &::after{
+        right: -10px;
+        border-left: none;
+      }
+    }
+
+    &.active .nav-link,
+    & .nav-link:hover,
+    & .nav-link:focus{
+      color: $color-main;
+
+      &::before{
+        opacity: 1;
+        left: 0;
+      }
+      &::after{
+        opacity: 1;
+        right: 0;
+      }
+    }
+  }
+  
+  @include media-breakpoint-down(md){
+    #header-nav{
+      padding-top: 25px;
+    }
+
+    .nav-item + .nav-item{
+      margin-left: 0;
+    }
+
+    .nav-link{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .navbar-toggler{
+    border-color: #fff;
+    margin-left: auto;
+
+    .hamburger{
+      fill: #fff;
+      height: 30px;
+      width: 30px;
     }
   }
 }
