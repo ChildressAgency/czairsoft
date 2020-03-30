@@ -73,3 +73,130 @@
     color: $color-alt;
   }
 }
+
+#video{
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  h3.bordered-title{
+    color: $color-main;
+    border-color: $color-main;
+  }
+}
+
+#events{
+  padding-top: 100px;
+  padding-bottom: 200px;
+  text-align: right;
+
+  .col-lg-6{
+    z-index: 5;
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-image: url(images/texture-white-bottom.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    z-index: 5;
+  }
+
+  h2{
+    color: $color-main;
+  }
+}
+
+#waiver{
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  .waiver-soldier{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 40%;
+    max-width: 450px;
+  }
+
+  .waivers-content{
+    z-index: 5;
+    color: #fff;
+
+    h3{
+      color: $color-main;
+    }
+  }
+  .videos-content{
+    z-index: 5;
+    text-align: center;
+
+    .youtube-follow{
+      display: block;
+      position: relative;
+      padding-top: 130px;
+      color: #000;
+
+      &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 121px;
+        width: 172px;
+        background-image: url(images/sprites.png);
+        background-repeat: no-repeat;
+        background-position: -118px 0px;
+      }
+    }
+  }
+}
+
+#travel-team{
+  .travel-team-content{
+    padding-top: 60px;
+    padding-bottom: 100px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .spray-painted-star{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    width: 100%;
+    max-width: 325px;
+  }
+}
+
+#safety{
+  padding-top: 60px;
+  padding-bottom:60px;
+}
+
+#safety-carousel{
+  z-index: 5;
+
+  .caption{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h3{
+      color: $color-main;
+    }
+  }
+}

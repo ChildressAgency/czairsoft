@@ -83,6 +83,7 @@ section{
   display: inline-block;
   position: relative;
   font-size: 24px;
+  color: #fff;
 
   &::before{
     content: "";
@@ -100,10 +101,58 @@ section{
   &:hover,
   &:focus{
     text-decoration: none;
+    color: $color-main;
   }
 
   &:hover::before,
   &:focus::before{
     background-position: -60px 0px;
+  }
+}
+
+.bordered-title{
+  border-width: 5px;
+  border-style: solid;
+  padding: 5px 25px;
+  display: inline-block;
+  text-align: center;
+}
+.rotate-10{
+  transform: rotate(10deg);
+}
+.rotate-neg2{
+  transform: rotate(-2deg);
+}
+.rotate-neg5{
+  transform: rotate(-5deg);
+}
+
+.brackets{
+  position: relative;
+  line-height: 1.2em;
+  display: inline-block;
+  margin-bottom: 25px;
+  text-shadow: 3px 3px 7px #000;
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    width: 20px;
+    border: 10px solid $color-main;
+    border-top-width: 7px;
+    border-bottom-width: 7px;
+  }
+
+  &::before{
+    border-right: none;
+    left: -25px;
+  }
+
+  &::after{
+    border-left: none;
+    right: -25px;
   }
 }
