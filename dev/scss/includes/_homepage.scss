@@ -177,6 +177,13 @@
     width: 100%;
     max-width: 325px;
   }
+
+  @include media-breakpoint-down(sm){
+    .spray-painted-star{
+      position: relative;
+      margin-bottom: -75px;
+    }
+  }
 }
 
 #safety{
