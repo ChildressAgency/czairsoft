@@ -4,6 +4,7 @@
   padding-bottom: 80px;
   color: #fff;
   text-align: center;
+  position: relative;
 
   h4{
     color: $color-main;
@@ -101,5 +102,19 @@
     p{
       margin-bottom: 0;
     }
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-image: url(images/texture-black-top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    z-index: 5;
+    height: 68px;
+    top: -60px;
   }
 }

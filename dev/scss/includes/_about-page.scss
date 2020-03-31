@@ -1,0 +1,105 @@
+.about-statement{
+  padding-top: 40px;
+  padding-bottom: 60px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+
+  h2{
+    color: $color-main;
+  }
+
+  p{
+    text-align: left;
+
+    span{
+      color: $color-main;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .spray-painted-star{
+    position: absolute;
+    right: 10%;
+    bottom: -50px;
+    width:225px;
+    z-index: 9;
+  }
+}
+
+#philosophy{
+  padding-bottom: 180px;
+}
+
+#vision{
+  padding-bottom: 100px;
+}
+
+#jim-bio{
+  background-image:url(images/textured-bg.jpg);
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-image: url(images/textured-bg-top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    z-index: 5;
+    height: 76px;
+    top: -75px;
+  }
+
+  h2{
+    color: $color-alt;
+  }
+
+  .bio-img{
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    color: $color-alt;
+
+    p{
+      margin-top:20px;
+    }
+  }
+}
+
+#contact{
+  padding-top: 40px;
+  padding-bottom: 100px;
+  color: #fff;
+
+  h2{
+    text-align: center; 
+    color: $color-main;
+    margin-bottom: 40px;
+  }
+}
+
+.contact-form{
+  .form-control{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $color-main;
+    font-size: 20px;
+    border-radius: 0;
+    color: #fff;
+
+    &:focus{
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  textarea.form-control{
+    background-color: #fff;
+    color: #000;
+    border-bottom: none;
+    margin-top: 40px;
+  }
+}
