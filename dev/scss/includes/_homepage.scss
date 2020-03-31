@@ -181,7 +181,7 @@
 
 #safety{
   padding-top: 60px;
-  padding-bottom:60px;
+  padding-bottom: 125px;
 }
 
 #safety-carousel{
@@ -197,6 +197,39 @@
 
     h3{
       color: $color-main;
+    }
+  }
+
+  .carousel-indicators{
+    bottom: -120px;
+
+    li{
+      border: none;
+      background-color: transparent;
+      height: 92px;
+      width: 96px;
+      position: relative;
+      opacity: 1;
+
+      &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 34px;
+        width: 34px;
+        background-image: url(images/sprites.png);
+        background-repeat: no-repeat;
+        background-position: 0px -146px;
+      }
+
+      &.active::before,
+      &.hover::before{
+        height: 92px;
+        width: 96px;
+        background-position: 0px -49px;
+      }
     }
   }
 }
