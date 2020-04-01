@@ -1,0 +1,66 @@
+#accordion{
+  .card{
+    border: none;
+    background-color: transparent;
+    margin-top: 25px;
+  }
+
+  .card-header{
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+  }
+
+  .stylized{
+    font-size: 40px;
+    margin-bottom: 0;
+    line-height: 1em;
+
+    .btn-faq{
+      &:hover,
+      &:focus{
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.accordion-alt{
+    .card-header{
+      border-bottom: 3px solid $color-alt;
+    }
+
+    .stylized{
+      .btn-faq{
+        color: $color-alt;
+      }
+    }
+
+    .card-body{
+      color: #000;
+    }
+
+    strong{
+      color: $color-alt;
+    }
+  }
+
+  &.accordion-main{
+    .card-header{
+      border-bottom: 3px solid $color-main;
+    }
+
+    .stylized{
+      .btn-faq{
+        color: $color-main;
+      }
+    }
+
+    .card-body{
+      color: #fff;
+    }
+
+    strong{
+      color: $color-main;
+    }
+  }
+}
