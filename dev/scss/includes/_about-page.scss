@@ -36,23 +36,8 @@
 }
 
 #jim-bio{
-  background-image:url(images/textured-bg.jpg);
   padding-top: 40px;
   padding-bottom: 60px;
-
-  &::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background-image: url(images/textured-bg-top.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    z-index: 5;
-    height: 76px;
-    top: -75px;
-  }
 
   h2{
     color: $color-alt;
