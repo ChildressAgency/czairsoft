@@ -132,6 +132,43 @@
       width: 30px;
     }
   }
+
+  .dropdown-menu{
+    background-color: #000;
+
+    .nav-item{
+      text-align: left;
+      margin-left: 15px;
+
+
+    }
+    .dropdown-item{
+      color: #fff;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus{
+        color: $color-main;
+        background-color: transparent;
+      }
+
+      &.chevron{
+        padding-left: 34px;
+        font-size: 20px;
+      }
+      &.chevron::before{
+        background-position: -44px -141px;
+        height: 28px;
+        width: 34px;
+        top: 10px;
+      }
+
+      &.chevron:hover::before,
+      &.chevron:focus::before{
+        background-position: -83px -141px;
+      }
+    }
+  }
 }
 
 #floating-social{
