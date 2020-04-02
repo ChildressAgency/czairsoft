@@ -9,6 +9,7 @@
     background-color: transparent;
     margin-bottom: 0;
     padding-bottom: 5px;
+    position: relative;
   }
 
   .stylized{
@@ -20,6 +21,18 @@
       &:hover,
       &:focus{
         text-decoration: none;
+      }
+
+      &::after{
+        content: "\2013";
+        position: absolute;
+        right: 0;
+        top: 8px;
+        font-family: $font-family-main;
+      }
+
+      &.collapsed::after{
+        content: "\002b";
       }
     }
   }

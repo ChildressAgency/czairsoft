@@ -190,3 +190,29 @@ section{
     margin-bottom: 40px;
   }
 }
+
+#rules{
+  padding-top: 25px;
+  padding-bottom: 100px;
+  background-image: url(images/wall-bullet-holes.jpg);
+
+  /*&::before{
+    content: "";
+    position: absolute;
+    top: -97px;
+    left: 0;
+    width: 100%;
+    height: 96px;
+    background-image: url(images/wall-bullet-holes-top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    z-index: 5;
+  }*/
+
+  h2{
+    color: $color-main;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
