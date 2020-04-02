@@ -6,6 +6,13 @@ jQuery(document).ready(function($){
   AOS.init();
 
   $('#safety-carousel .carousel-inner .carousel-item').carouselHeights();
+
+  var swiper = new Swiper('#map-carousel', {
+    navigation:{
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
 });  //end jquery
 
 /**

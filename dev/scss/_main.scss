@@ -216,3 +216,35 @@ section{
     margin-bottom: 40px;
   }
 }
+
+#maps{
+  padding-top: 25px;
+  padding-bottom: 100px;
+
+  h2{
+    color: $color-alt;
+    text-align: center;
+  }
+}
+#map-carousel{
+  .swiper-button-next,
+  .swiper-button-prev{
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+    padding: 40px 20px;
+  }
+
+  .text-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 15px;
+    background-color: $color-alt;
+    color: #fff;
+
+    h2{
+      color: $color-main;
+    }
+  }
+}
