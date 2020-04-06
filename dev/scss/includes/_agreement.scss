@@ -1,0 +1,92 @@
+#agreement-page-title{
+  background-image: url(images/textured-bg-dark.jpg);
+  padding-top: 60px;
+  padding-bottom: 40px;
+  color: $color-main;
+}
+
+#agreement-message{
+  background-image: url(images/aiming-rifle.jpg);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .mixed-message{
+    max-width: 675px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.mixed-message{
+  font-family: $font-family-main;
+  color: #fff;
+  text-transform: none;
+  font-weight: $font-weight-bold;
+  text-align: right;
+
+  span{
+    font-family: $font-family-alt;
+    color: $color-main;
+  }
+}
+
+#agreement-rules{
+  background-image: url(images/background-scratched.jpg);
+  padding-top: 40px;
+  padding-bottom: 60px;
+  color: #fff;
+
+  h3{
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+}
+
+#rules-accordion{
+  .card{
+    background-color: transparent;
+    border: none;
+  }
+
+  .card-header{
+    h3{
+      margin-bottom: 0
+    }
+  }
+
+  .card-body{
+    padding-top: 0;
+  }
+
+  .btn-faq{
+    background-color: transparent;
+    border: none;
+    color: $color-main;
+
+    &.collapsed{
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus{
+      color: $color-main;
+      outline: none;
+    }
+  }
+}
+
+#final-statement{
+  background-image: url(images/textured-bg-dark.jpg);
+  padding-top: 40px;
+  padding-bottom: 100px;
+  color: $color-main;
+  font-size: 20px;
+  text-align: center;
+  font-weight: $font-weight-bold;
+
+  p{
+    max-width: 725px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

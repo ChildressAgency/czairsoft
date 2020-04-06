@@ -18,9 +18,15 @@
     line-height: 1em;
 
     .btn-faq{
+      border: none;
+      background-color: transparent;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+
       &:hover,
       &:focus{
         text-decoration: none;
+        outline: none;
       }
 
       &::after{
