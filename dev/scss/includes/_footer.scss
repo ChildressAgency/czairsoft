@@ -21,6 +21,10 @@
       text-decoration: underline;
     }
   }
+
+  #footer-nav{
+    margin-top: 40px;
+  }
   .nav-item{
     text-align: center;
     display: flex;
@@ -80,8 +84,6 @@
   }
 
   .hours{
-    margin-top: 60px;
-
     span{
       color: $color-main;
       font-weight: $font-weight-semibold;
