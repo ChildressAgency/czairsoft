@@ -164,6 +164,16 @@ section{
     border-left: none;
     right: -25px;
   }
+
+  &.brackets-alt::before,
+  &.brackets-alt::after{
+    border-color: $color-alt;
+  }
+
+  &.brackets-alert::before,
+  &.brackets-alert::after{
+    border-color: $color-alert;
+  }
 }
 
 .textured-bg{
@@ -304,5 +314,40 @@ section{
   #waiver-links h4,
   .waiver-links{
     max-width: 700px;
+  }
+}
+
+#rules-policies-page-title{
+  padding-bottom: 60px;
+
+  h2{
+    text-align: center;
+    color: $color-alt;
+  }
+}
+
+#first-rule{
+  background-image: url(images/camo-bg-large.jpg);
+  padding-top: 40px; 
+  padding-bottom: 100px;
+  color: #fff;
+
+  h2{
+    text-align: center;
+    color: $color-alert;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  article{
+    font-size: 20px;
+  }
+
+  .first-rule{
+    h2{
+      color: $color-main;
+      text-transform: none;
+      margin-top: 40px;
+    }
   }
 }
