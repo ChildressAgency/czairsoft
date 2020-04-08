@@ -21,19 +21,19 @@
   ?>
   <div id="floating-social">
     <?php if($facebook): ?>
-      <a href="<?php echo esc_url($facebook); ?>" id="facebook" aria-label="Facebook">
+      <a href="<?php echo esc_url($facebook); ?>" id="facebook" aria-label="Facebook" target="_blank">
         <svg class="social-icon">
           <use xlink:href="#icon-facebook" />
         </svg>
       </a>
     <?php endif; if($twitter): ?>
-      <a href="<?php echo esc_url($twitter); ?>" id="twitter" aria-label="Twitter">
+      <a href="<?php echo esc_url($twitter); ?>" id="twitter" aria-label="Twitter" target="_blank">
         <svg class="social-icon">
           <use xlink:href="#icon-twitter" />
         </svg>
       </a>
     <?php endif; if($youtube): ?>
-      <a href="<?php echo esc_url($youtube); ?>" id="youtube" aria=label="YouTube">
+      <a href="<?php echo esc_url($youtube); ?>" id="youtube" aria=label="YouTube" target="_blank">
         <svg class="social-icon">
           <use xlink:href="#icon-youtube" />
         </svg>
@@ -89,18 +89,20 @@
   <section id="hero" class="<?php if(is_front_page()){ echo 'hp-hero'; } ?>" style="background-image:url(<?php echo esc_url($hero_image); ?>);<?php echo esc_attr($hero_image_css); ?>">
     <div class="container">
       <div class="hero-caption">
-        <h1><?php the_field('hero_title'); ?></h1>
-        <p><?php the_field('hero_caption'); ?></p>
+        <h1 class="" data-aos="slide-left" data-aos-easing="ease-out" data-aos-delay="750"><?php the_field('hero_title'); ?></h1>
+        <div data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="750">
+          <p><?php the_field('hero_caption'); ?></p>
 
-        <?php 
-          $hero_link_1 = get_field('hero_link_1');
-          $hero_link_2 = get_field('hero_link_2');
-        ?>
-        <?php if($hero_link_1): ?>
-          <a href="<?php echo esc_url($hero_link_1['url']); ?>" class="chevron"><?php echo esc_html($hero_link_1['title']); ?></a>
-        <?php endif; if($hero_link_2): ?>
-          <a href="<?php echo esc_url($hero_link_2['url']); ?>" class="chevron"><?php echo esc_html($hero_link_2['title']); ?></a>
-        <?php endif; ?>
+          <?php 
+            $hero_link_1 = get_field('hero_link_1');
+            $hero_link_2 = get_field('hero_link_2');
+          ?>
+          <?php if($hero_link_1): ?>
+            <a href="<?php echo esc_url($hero_link_1['url']); ?>" class="chevron"><?php echo esc_html($hero_link_1['title']); ?></a>
+          <?php endif; if($hero_link_2): ?>
+            <a href="<?php echo esc_url($hero_link_2['url']); ?>" class="chevron"><?php echo esc_html($hero_link_2['title']); ?></a>
+          <?php endif; ?>
+        </div>
       </div>
     </div>
     <div class="overlay"></div>
