@@ -134,3 +134,28 @@ function czairsoft_header_fallback_menu(){ ?>
     </ul>
   </div>
 <?php }
+
+function czairsoft_footer_fallback_menu(){ ?>
+  <nav id="footer-nav" class="">
+    <ul class="nav justify-content-center">
+      <li class="nav-item<?php if(is_front_page()){ echo ' active'; } ?>">
+        <a href="<?php echo esc_url(home_url()); ?>" class="nav-link">CZ</a>
+      </li>
+      <li class="nav-item<?php if(is_page('pricing')){ echo ' active'; } ?>">
+        <a href="<?php echo esc_url(home_url('pricing')); ?>" class="nav-link">PRICING</a>
+      </li>
+      <li class="nav-item<?php if(is_page('op-center')){ echo ' active'; } ?>">
+        <a href="<?php echo esc_url(home_url('op-center')); ?>" class="nav-link">OP CENTER</a>
+      </li>
+      <li class="nav-item<?php if(is_page('cz-policies')){ echo ' active'; } ?>">
+        <a href="<?php echo esc_url(home_url('cz-policies')); ?>" class="nav-link">CZ POLICIES</a>
+      </li>
+      <li class="nav-item<?php if(is_page('about-cz')){ echo ' active'; } ?>">
+        <a href="<?php echo esc_url(home_url('about-cz')); ?>" class="nav-link">ABOUT CZ</a>
+      </li>
+      <li class="nav-item<?php if(is_page('cz-faqs')){ echo ' active'; } ?>">
+        <a href="<?php echo esc_url(home_url('cz-faqs')); ?>" class="nav-link">CZ FAQs</a>
+      </li>
+    </ul>
+  </nav>
+<?php }
