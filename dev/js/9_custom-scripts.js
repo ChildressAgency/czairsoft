@@ -13,6 +13,24 @@ jQuery(document).ready(function($){
       prevEl: '.swiper-button-prev'
     }
   });
+
+  var textWrapper = document.querySelector('.roll-in .letters');
+  if(textWrapper && textWrapper.length){
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime({
+      loop: false,
+      targets: '.roll-in .letter',
+      translateY: ['.55em', 0],
+      translateX: ['1.1em', 0],
+      translateZ: 0,
+      rotateZ: [180, 0],
+      duration: 750,
+      easing: 'easeOutExpo',
+      delay: function(el, i){ return 250 * i; }
+      //delay: anime.stagger(250)
+    });
+  }
 });  //end jquery
 
 /**

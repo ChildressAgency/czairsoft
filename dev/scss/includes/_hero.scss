@@ -43,3 +43,18 @@
     }
   }
 }
+
+.roll-in{
+  position: relative;
+
+  .text-wrapper{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .letter{
+    transform-origin: 0 100%;
+    display: inline-block;
+  }
+}
