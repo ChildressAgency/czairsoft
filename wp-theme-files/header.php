@@ -9,6 +9,8 @@
   <meta http-equiv="cache-control" content="private">
 
   <title><?php echo esc_html(bloginfo('name')); ?></title>
+  <link href="..wp-theme-files/Fonts/dcc_sharp_distress_black_by_dccanim-webfont.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link href="../wp-theme-files/Fonts/dcc_sharp_distress_black_by_dccanim-webfont.woff" rel="preload" as="font" type="font/woff" crossorigin="anonymous" />
 
   <?php wp_head(); ?>
 </head>
@@ -89,7 +91,7 @@
   <section id="hero" class="<?php if(is_front_page()){ echo 'hp-hero'; } ?>" style="background-image:url(<?php echo esc_url($hero_image); ?>);<?php echo esc_attr($hero_image_css); ?>">
     <div class="container">
       <div class="hero-caption">
-        <h1 class="" data-aos="slide-left" data-aos-easing="ease-out" data-aos-delay="750"><?php the_field('hero_title'); ?></h1>
+        <h1 class="" data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="750"><?php the_field('hero_title'); ?></h1>
         <div data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="750">
           <p><?php the_field('hero_caption'); ?></p>
 

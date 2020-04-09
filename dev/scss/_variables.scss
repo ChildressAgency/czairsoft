@@ -1,10 +1,11 @@
 @font-face{
   font-family: 'dccSharpDistress';
-  src: url('Fonts/dcc_sharp_distress_black_by_dccanim.otf');
+  /*src: url('Fonts/dcc_sharp_distress_black_by_dccanim.otf');*/
   src: url('Fonts/dcc_sharp_distress_black_by_dccanim-webfont.woff2') format('woff2'),
        url('Fonts/dcc_sharp_distress_black_by_dccanim-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 $font-family-main: "Source Sans Pro", sans-serif;
