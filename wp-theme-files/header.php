@@ -87,11 +87,16 @@
       $hero_image = get_field('hero_default_image', 'option');
       $hero_image_css = get_field('hero_default_image_css', 'option');
     }
+
+    $hero_title = get_field('hero_title');
+    if(!$hero_title){
+      $hero_title = get_the_title();
+    }
   ?>
   <section id="hero" class="<?php if(is_front_page()){ echo 'hp-hero'; } ?>" style="background-image:url(<?php echo esc_url($hero_image); ?>);<?php echo esc_attr($hero_image_css); ?>">
     <div class="container">
       <div class="hero-caption">
-        <h1 class="" data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="750"><?php the_field('hero_title'); ?></h1>
+        <h1 class="" data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="750"><?php echo esc_html($hero_title); ?></h1>
         <div data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="750">
           <p><?php the_field('hero_caption'); ?></p>
 
