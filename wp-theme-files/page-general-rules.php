@@ -11,7 +11,7 @@
               <div class="card">
                 <div id="question-<?php echo $r; ?>" class="card-header">
                   <h4 class="stylized">
-                    <a href="#answer-<?php echo $r; ?>" class="btn-faq collapsed" type="button" data-toggle="collapse" data-target="#answer-<?php echo $r; ?>" aria-expanded="false" aria-controls="answer-<?php echo $r; ?>"><?php the_sub_field('rule_title'); ?></a>
+                    <button data-target="#answer-<?php echo $r; ?>" class="btn-faq collapsed" type="button" data-toggle="collapse" data-target="#answer-<?php echo $r; ?>" aria-expanded="false" aria-controls="answer-<?php echo $r; ?>"><?php the_sub_field('rule_title'); ?></button>
                   </h4>
                 </div>
                 <div id="answer-<?php echo $r; ?>" class="collapse" aria-labelledby="question-<?php echo $r; ?>" data-parent="#accordion">
