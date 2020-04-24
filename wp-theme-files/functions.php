@@ -159,3 +159,14 @@ function czairsoft_footer_fallback_menu(){ ?>
     </ul>
   </nav>
 <?php }
+
+add_action('acf/init', 'czairsoft_acf_options_page');
+function czairsoft_acf_options_page(){
+  acf_add_options_page(array(
+    'page_title' => esc_html__('Theme Settings', 'czairsoft'),
+    'menu_title' => esc_html__('Theme Settings', 'czairsoft'),
+    'menu_slug' => 'theme-settings',
+    'capability' => 'edit_posts',
+    'redirect' => false
+  ));
+}
