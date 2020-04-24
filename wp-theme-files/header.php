@@ -9,8 +9,8 @@
   <meta http-equiv="cache-control" content="private">
 
   <title><?php echo esc_html(bloginfo('name')); ?></title>
-  <link href="..wp-theme-files/Fonts/dcc_sharp_distress_black_by_dccanim-webfont.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous" />
-  <link href="../wp-theme-files/Fonts/dcc_sharp_distress_black_by_dccanim-webfont.woff" rel="preload" as="font" type="font/woff" crossorigin="anonymous" />
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/Fonts/dcc_sharp_distress_black_by_dccanim-webfont.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/Fonts/dcc_sharp_distress_black_by_dccanim-webfont.woff" rel="preload" as="font" type="font/woff" crossorigin="anonymous" />
 
   <?php wp_head(); ?>
 </head>
@@ -20,6 +20,7 @@
     $facebook = get_field('facebook', 'option');
     $twitter = get_field('twitter', 'option');
     $youtube = get_field('youtube', 'option');
+    $instagram = get_field('instagram', 'option');
   ?>
   <div id="floating-social">
     <?php if($facebook): ?>
@@ -35,9 +36,15 @@
         </svg>
       </a>
     <?php endif; if($youtube): ?>
-      <a href="<?php echo esc_url($youtube); ?>" id="youtube" aria=label="YouTube" target="_blank">
+      <a href="<?php echo esc_url($youtube); ?>" id="youtube" aria-label="YouTube" target="_blank">
         <svg class="social-icon">
           <use xlink:href="#icon-youtube" />
+        </svg>
+      </a>
+    <?php endif; if($instagram): ?>
+      <a href="<?php echo esc_url($instagram); ?>" id="instagram" aria-label="Instagram" target="_blank">
+        <svg class="social-icon">
+          <use xlink:href="#icon-instagram" />
         </svg>
       </a>
     <?php endif; ?>
