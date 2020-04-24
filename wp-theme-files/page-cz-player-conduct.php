@@ -2,7 +2,7 @@
   <main id="main">
     <section id="agreement-page-title">
       <div class="container">
-        <h2><?php the_field('page_title'); ?></h2>
+        <?php get_template_part('partials/page_intro'); ?>
       </div>
     </section>
 
@@ -15,7 +15,6 @@
     <section id="agreement-rules">
       <div class="container-fluid">
         <?php the_field('rules_intro'); ?>
-        <?php get_template_part('partials/page_intro'); ?>
 
         <div class="row">
           <div class="col-lg-8">
