@@ -8,7 +8,7 @@
     </section>
 
     <?php $second_section_background_image = get_field('second_section_background_image'); ?>
-    <section id="passion" class="about-statement" style="background-image:url(<?php echo esc_url($second_section_background_image['url']); ?>);">
+    <section id="passion" class="about-statement" style="background-image:url(<?php echo esc_url($second_section_background_image['url']); ?>); <?php the_field('section_section_background_image_css'); ?>">
       <div class="container">
         <h2><?php the_field('second_section_title'); ?></h2>
         <?php the_field('second_section_content'); ?>
