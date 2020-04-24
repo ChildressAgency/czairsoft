@@ -12,6 +12,7 @@
               $intro_img = get_field('intro_section_image');
               if($intro_img): ?>
                 <img src="<?php echo esc_url($intro_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($intro_img['alt']); ?>" data-aos="zoom-in" data-aos-easing="ease-out" />
+            <?php endif; ?>
           </div>
           <div class="col-lg-7">
             <article data-aos="fade-right" data-aos-easing="ease-out">
@@ -117,12 +118,15 @@
       $video = get_field('homepage_video');
       $video_title = get_field('homepage_video_title');
       if($video): ?>
+        <?php $video = str_replace('></iframe>', ' class="embed-responsive-item"></iframe>', $video); ?>
         <section id="video">
           <div class="container">
             <div class="row">
               <div class="col-lg-6">
                 <div class="video">
-                  <?php echo apply_filters('the_content', $video); ?>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <?php echo $video; ?>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-6">
@@ -138,6 +142,7 @@
         <div class="row">
           <div class="col-lg-6 offset-lg-6">
             <h2><?php the_field('coming_events_section_title'); ?></h2>
+            <?php the_field('coming_events_section_content'); ?>
             <?php $coming_events_link = get_field('coming_events_section_link'); ?>
             <a href="<?php echo esc_url($coming_events_link['url']); ?>" class="btn-main"><?php echo esc_html($coming_events_link['title']); ?></a>
           </div>
