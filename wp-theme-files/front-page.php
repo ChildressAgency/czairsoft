@@ -63,11 +63,11 @@
                 <?php
                   $card_2_img = get_field('duty_calls_card_2_image');
                   $card_2_title = get_field('duty_calls_card_2_title');
-                  $card_3_link = get_field('duty_calls_card2_link');
+                  $card_2_link = get_field('duty_calls_card_2_link');
                 ?>
                 <div class="flip-card-front" style="background-image:url(<?php echo esc_url($card_2_img['url']); ?>);">
                   <div class="flip-card-caption" data-aos="fade-in" data-aos-easing="eas-out" data-aos-delay="500">
-                    <h4><?php echo esc_url($card_2_title); ?></h4>
+                    <h4><?php echo esc_html($card_2_title); ?></h4>
                     <a href="<?php echo esc_url($card_2_link['url']); ?>" class="btn-main"><?php echo esc_html($card_2_link['title']); ?></a>
                   </div>
                   <div class="overlay"></div>
@@ -137,7 +137,8 @@
         </section>
     <?php endif; ?>
 
-    <section id="events" style="background-image:url(<?php the_field('coming_events_section_image'); ?>); <?php the_field('coming_events_section_image_css'); ?>">
+    <?php $event_bg_img = get_field('coming_events_section_image'); ?>
+    <section id="events" style="background-image:url(<?php echo esc_url($event_bg_img['url']); ?>); <?php the_field('coming_events_section_image_css'); ?>">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6 offset-lg-6">
