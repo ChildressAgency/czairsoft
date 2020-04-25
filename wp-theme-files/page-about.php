@@ -1,4 +1,4 @@
-<?php get_header(); ?>wp-embed-aspect-16-9 wp-has-aspect-ratio
+<?php get_header(); ?>
   <main id="main">
     <section id="philosophy" class="about-statement">
       <div class="container">
