@@ -77,7 +77,7 @@
             'menu_class' => 'navbar-nav ml-auto',
             'echo' => true,
             'fallback_cb' => 'czairsoft_header_fallback_menu',
-            'items_wrap' => '<ul id="%1$s" class=%2$s">%3$s</ul>',
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
             'depth' => 2,
             'walker' => new WP_Bootstrap_Navwalker()
           );
@@ -100,7 +100,7 @@
       $hero_title = get_the_title();
     }
   ?>
-  <section id="hero" class="<?php if(is_front_page()){ echo 'hp-hero'; } ?>" style="background-image:url(<?php echo esc_url($hero_image); ?>);<?php echo esc_attr($hero_image_css); ?>">
+  <section id="hero" class="<?php if(is_front_page()){ echo 'hp-hero'; } ?>" style="background-image:url(<?php echo esc_url($hero_image['url']); ?>);<?php echo esc_attr($hero_image_css); ?>">
     <div class="container">
       <div class="hero-caption">
         <h1 class="" data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="750"><?php echo esc_html($hero_title); ?></h1>
