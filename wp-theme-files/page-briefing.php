@@ -1,6 +1,6 @@
 <?php get_header(); ?>
   <main id="main">
-    <section id="op-center" style="background-image: url(../wp-theme-files/images/facemask-helmet.jpg);">
+    <section id="op-center" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/facemask-helmet.jpg);">
       <div class="container">
         <h2 class="brackets rotate-neg10"><?php the_field('page_title'); ?></h2>
         <div class="row">
@@ -18,7 +18,7 @@
               <div class="dates-list">
                 <?php
                   $current_month = date('m', time());
-                  $current_quarter = ceil($current_Month / 3);
+                  $current_quarter = ceil($current_month / 3);
                 ?>
 
                 <?php if(have_rows('first_quarter_months')): ?>
@@ -70,13 +70,13 @@
                 <?php endif; ?>
 
                 <?php if(have_rows('third_quarter_months')): ?>
-                  <div class="quarter<?php if($current_quarter == 2){ echo ' current'; } ?>">
+                  <div class="quarter<?php if($current_quarter == 3){ echo ' current'; } ?>">
                     <h3>3RD QTR</h3>
                     <div class="quarter-months">
                       <?php while(have_rows('third_quarter_months')): the_row(); ?>
 
                         <div class="quarter-month">
-                          <h4><?php the_sub_field('third_quarts_month'); ?></h4>
+                          <h4><?php the_sub_field('third_quarter_month'); ?></h4>
 
                           <?php if(have_rows('third_quarter_days')): ?>
                             
@@ -95,7 +95,7 @@
                 <?php endif; ?>
 
                 <?php if(have_rows('fourth_quarter_months')): ?>
-                  <div class="quarter<?php if($current_quarter == 2){ echo ' current'; } ?>">
+                  <div class="quarter<?php if($current_quarter == 4){ echo ' current'; } ?>">
                     <h3>4TH QTR</h3>
                     <div class="quarter-months">
                       <?php while(have_rows('fourth_quarter_months')): the_row(); ?>
@@ -129,7 +129,7 @@
             <h3>UPCOMING EVENTS</h3>
             <ul>
               <?php while(have_rows('upcoming_events')): the_row(); ?>
-                <li><?php the_sub_field('upcoming_event'); ?></li>
+                <li class="mb-4"><?php the_sub_field('upcoming_event'); ?></li>
               <?php endwhile; ?>
             </ul>
           </div>

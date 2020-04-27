@@ -1,12 +1,17 @@
 body{
   color: #000;
   font-family: $font-family-main;
+  font-size: 18px;
 }
 
 .stylized{
   font-family: $font-family-alt;
   text-transform: uppercase;
   font-weight: $font-weight-black;
+}
+
+table .stylized{
+  color: $color-alt;
 }
 
 h1{
@@ -39,7 +44,14 @@ h4{
 }
 
 a{
+  font-weight: $font-weight-bold;
+  color: $color-alt;
   transition: all .2s ease;
+
+  &:hover,
+  &:focus{
+    color: $color-alt;
+  }
 }
 
 .container-fluid{
@@ -82,6 +94,33 @@ section{
   &.dark-overlay{
     background-color: rgba(0, 0, 0, .6);
   }
+}
+
+.alignnone{
+  display:block;
+  max-width: 100%;
+  height: auto;
+  margin: 25px;
+}
+.aligncenter{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 25px auto;
+}
+.alignleft{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  float: left;
+  margin: 25px 25px 25px 0px;
+}
+.alignright{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  float: right;
+  margin: 25px 0px 25px 25px;
 }
 
 .chevron{
@@ -169,11 +208,17 @@ section{
     right: -25px;
   }
 
+  &.brackets-alt{
+    color: $color-alt;
+  }
   &.brackets-alt::before,
   &.brackets-alt::after{
     border-color: $color-alt;
   }
 
+  &.brackets-alert{
+    color: $color-alert;
+  }
   &.brackets-alert::before,
   &.brackets-alert::after{
     border-color: $color-alert;
@@ -183,6 +228,7 @@ section{
 .textured-bg{
   background-image: url(images/textured-bg.jpg);
   background-size: cover;
+  background-repeat: repeat-y;
   background-position: center center;
 
   &::before{
@@ -237,6 +283,11 @@ section{
   }
 }
 
+#rules-policies{
+  padding-top: 25px;
+  padding-bottom:130px;
+}
+
 #maps{
   padding-top: 25px;
   padding-bottom: 100px;
@@ -275,6 +326,11 @@ section{
   .page-content{
     h2{
       text-align: center;
+      color: $color-alt;
+      margin-bottom: 40px;
+    }
+
+    .chevron{
       color: $color-alt;
     }
   }

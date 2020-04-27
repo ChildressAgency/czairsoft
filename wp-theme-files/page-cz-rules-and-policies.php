@@ -20,7 +20,7 @@
           <div class="col-lg-6">
             <div class="first-rule">
               <h2>Rule 1.</h2>
-              <h4><?php the_field('rule_one'); ?></h4>
+              <h4><?php the_field('rule_1'); ?></h4>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
     </section>
 
     <?php if(have_rows('rules')): ?>
-      <section id="rules" class="texture-bg">
+      <section id="rules-policies" class="textured-bg">
         <div class="container">
           <div id="accordion" class="accordion accordion-alt">
             <?php $r = 0; while(have_rows('rules')): the_row(); ?>
