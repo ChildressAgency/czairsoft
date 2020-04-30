@@ -34,6 +34,13 @@ h4{
   font-size: 46px;
 }
 
+.table-bordered, 
+.table-bordered td, 
+.table-bordered th{
+  border-color: #000;
+}
+
+
 @include media-breakpoint-only(xs){
   h1{
     font-size: 80px;

@@ -124,6 +124,10 @@
   padding-bottom: 60px;
   background-image: url(images/split-bg.jpg);
 
+  div[class^="col"]{
+    z-index: 9;
+  }
+
   .waiver-soldier{
     position: absolute;
     bottom: 0;
