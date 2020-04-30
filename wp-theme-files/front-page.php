@@ -40,7 +40,7 @@
                 <div class="flip-card-front" style="background-image:url(<?php echo esc_url($card_1_img['url']); ?>);">
                   <div class="flip-card-caption" data-aos="fade-in" data-aos-easing="ease-out" data-aos-delay="500">
                     <h4><?php echo esc_html($card_1_title); ?></h4>
-                    <a href="<?php echo esc_url($card_1_link['url']); ?>" class="btn-main"><?php echo esc_html($card_1_link['title']); ?></a>
+                    <a href="<?php echo esc_url($card_1_link['url']); ?>" class="btn-main" target="<?php echo $card_1_link['target'] ? esc_attr($card_1_link['target']) : '_self'; ?>"><?php echo esc_html($card_1_link['title']); ?></a>
                   </div>
                   <div class="overlay"></div>
                 </div>
@@ -48,7 +48,7 @@
                 <div class="flip-card-back" style="background-image:url(<?php echo esc_url($card_1_img['url']); ?>);">
                   <div class="flip-card-caption">
                     <h4><?php echo esc_html($card_1_title); ?></h4>
-                    <a href="<?php echo esc_url($card_1_link['url']); ?>" class="btn-main"><?php echo esc_html($card_1_link['title']); ?></a>
+                    <a href="<?php echo esc_url($card_1_link['url']); ?>" class="btn-main" target="<?php echo $card_1_title['target'] ? esc_attr($card_1_link['target']) : '_self'; ?>"><?php echo esc_html($card_1_link['title']); ?></a>
                   </div>
                   <div class="overlay dark-overlay"></div>
                 </div>
@@ -68,14 +68,14 @@
                 <div class="flip-card-front" style="background-image:url(<?php echo esc_url($card_2_img['url']); ?>);">
                   <div class="flip-card-caption" data-aos="fade-in" data-aos-easing="eas-out" data-aos-delay="500">
                     <h4><?php echo esc_html($card_2_title); ?></h4>
-                    <a href="<?php echo esc_url($card_2_link['url']); ?>" class="btn-main"><?php echo esc_html($card_2_link['title']); ?></a>
+                    <a href="<?php echo esc_url($card_2_link['url']); ?>" class="btn-main" target="<?php echo $card_2_link['target'] ? esc_attr($card_2_link['target']) : '_self'; ?>"><?php echo esc_html($card_2_link['title']); ?></a>
                   </div>
                   <div class="overlay"></div>
                 </div>
                 <div class="flip-card-back" style="background-image:url(<?php echo esc_url($card_2_img['url']); ?>);">
                   <div class="flip-card-caption">
                     <h4><?php echo esc_html($card_2_title); ?></h4>
-                    <a href="<?php echo esc_url($card_2_link['url']); ?>" class="btn-main"><?php echo esc_html($card_2_link['title']); ?></a>
+                    <a href="<?php echo esc_url($card_2_link['url']); ?>" class="btn-main" target="<?php echo $card_2_link['target'] ? esc_attr($card_2_link['target']) : '_self'; ?>"><?php echo esc_html($card_2_link['title']); ?></a>
                   </div>
                   <div class="overlay dark-overlay"></div>
                 </div>
@@ -95,14 +95,14 @@
                 <div class="flip-card-front" style="background-image:url(<?php echo esc_url($card_3_img['url']); ?>);">
                   <div class="flip-card-caption" data-aos="fade-in" data-aos-easing="ease-out" data-aos-delay="500">
                     <h4><?php echo esc_html($card_3_title); ?></h4>
-                    <a href="<?php echo esc_url($card_3_link['url']); ?>" class="btn-main"><?php echo esc_html($card_3_link['title']); ?></a>
+                    <a href="<?php echo esc_url($card_3_link['url']); ?>" class="btn-main" target="<?php echo $card_3_link['target'] ? esc_attr($card_3_link['target']) : '_self'; ?>"><?php echo esc_html($card_3_link['title']); ?></a>
                   </div>
                   <div class="overlay"></div>
                 </div>
                 <div class="flip-card-back" style="background-image:url(<?php echo esc_url($card_3_img['url']);?>);">
                   <div class="flip-card-caption">
                     <h4><?php echo esc_html($card_3_title); ?></h4>
-                    <a href="<?php echo esc_url($card_3_link['url']); ?>" class="btn-main"><?php echo esc_html($card_3_link['title']); ?></a>
+                    <a href="<?php echo esc_url($card_3_link['url']); ?>" class="btn-main" target="<?php echo $card_3_link['target'] ? esc_attr($card_3_link['target']) : '_self'; ?>"><?php echo esc_html($card_3_link['title']); ?></a>
                   </div>
                   <div class="overlay dark-overlay"></div>
                 </div>
@@ -145,7 +145,7 @@
             <h2><?php the_field('coming_events_section_title'); ?></h2>
             <?php the_field('coming_events_section_content'); ?>
             <?php $coming_events_link = get_field('coming_events_section_link'); ?>
-            <a href="<?php echo esc_url($coming_events_link['url']); ?>" class="btn-main"><?php echo esc_html($coming_events_link['title']); ?></a>
+            <a href="<?php echo esc_url($coming_events_link['url']); ?>" class="btn-main" target="<?php echo $coming_events_link['target'] ? esc_attr($coming_events_link['target']) : '_self'; ?>"><?php echo esc_html($coming_events_link['title']); ?></a>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@
               <h3 class="bordered-title rotate-neg2 mb-5"><?php the_field('waivers_section_title'); ?></h3>
               <p><?php the_field('waivers_section_description'); ?></p>
               <?php $waivers_link = get_field('waivers_section_link'); ?>
-              <a href="<?php echo esc_url($waivers_link['url']); ?>" class="btn-main"><?php echo esc_html($waivers_link['title']); ?></a>
+              <a href="<?php echo esc_url($waivers_link['url']); ?>" class="btn-main" target="<?php echo $waivers_link['target'] ? esc_attr($waivers_link['target']) : '_self'; ?>"><?php echo esc_html($waivers_link['title']); ?></a>
               <br />
               <h3 class="bordered-title rotate-neg5 mt-5 mb-4"><?php the_field('swag_section_title'); ?></h3>
               <?php
@@ -168,9 +168,9 @@
                 $swag_link_2 = get_field('swag_section_link_2'); 
               ?>
               <?php if($swag_link_1): ?>
-                <a href="<?php echo esc_url($swag_link_1['url']); ?>" class="chevron"><?php echo esc_html($swag_link_1['title']); ?></a>
+                <a href="<?php echo esc_url($swag_link_1['url']); ?>" class="chevron" target="<?php echo $swag_link_1['target'] ? esc_attr($swag_link_1['target']) : '_self'; ?>"><?php echo esc_html($swag_link_1['title']); ?></a>
               <?php endif; if($swag_link_2): ?>
-                <a href="<?php echo esc_url($swag_link_2['url']); ?>" class="chevron"><?php echo esc_html($swag_link_2['title']); ?></a>
+                <a href="<?php echo esc_url($swag_link_2['url']); ?>" class="chevron" target="<?php echo $swag_link_2['target'] ? esc_attr($swag_link_2['target']) : '_self'; ?>"><?php echo esc_html($swag_link_2['title']); ?></a>
               <?php endif; ?>
             </div>
           </div>
@@ -178,7 +178,7 @@
             <div class="videos-content">
               <h2>CZ Videos</h2>
               <?php $videos_link = get_field('videos_link'); ?>
-              <a href="<?php echo esc_url($videos_link['url']); ?>" class="youtube-follow"><?php echo esc_html($videos_link['title']); ?></a>
+              <a href="<?php echo esc_url($videos_link['url']); ?>" class="youtube-follow" target="<?php echo $videos_link['target'] ? esc_attr($videos_link['target']) : '_self'; ?>"><?php echo esc_html($videos_link['title']); ?></a>
             </div>
           </div>
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/soldier-pointing-gun.png" class="waiver-soldier" alt="" data-aos="fade-up" data-aos="ease-out" />

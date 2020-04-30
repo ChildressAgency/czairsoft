@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-lg-4">
             <?php $directions = get_field('google_directions_link'); ?>
-            <a href="<?php echo esc_url($directions['url']); ?>" class="logo-map-link">
+            <a href="<?php echo esc_url($directions['url']); ?>" class="logo-map-link" target="<?php echo $directions['target'] ? esc_attr($directions['target']) : '_self'; ?>">
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-large.png" class="img-fluid d-block mx-auto" alt="CZ Airsoft Logo" />
               <span class="rotate-5">CLICK FOR DIRECTIONS</span>
             </a>

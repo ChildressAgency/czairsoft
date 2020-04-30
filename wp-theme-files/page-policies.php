@@ -31,7 +31,7 @@
                     $policy_slug = sanitize_title($policy_link['title']);
                   ?>
                   <div id="<?php echo esc_attr($policy_slug); ?>" class="tab-pane fade<?php if($c == 0){ echo ' show active'; } ?>" role="tabpanel" aria-labelledby="<?php echo esc_attr($policy_slug); ?>-tab">
-                    <a href="<?php echo esc_url($policy_link['url']); ?>">
+                    <a href="<?php echo esc_url($policy_link['url']); ?>" target="<?php echo $policy_link['target'] ? esc_attr($policy_link['target']) : '_self'; ?>">
                       <?php $policy_link_image = get_sub_field('policy_link_image'); ?>
                       <img src="<?php echo esc_url($policy_link_image['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($policy_link_image['alt']); ?>" />
                     </a>
