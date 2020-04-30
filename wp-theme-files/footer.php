@@ -26,7 +26,7 @@
         </div>
         <div class="col-lg-2">
           <h4>Location</h4>
-          <p><?php the_field('address', 'option'); ?>, <?php the_field('city', 'option'); ?>, <?php the_field('state', 'option'); ?> <?php the_field('zip', 'option'); ?></p>
+          <p><a href="<?php the_field('google_maps_link', 'option'); ?>" target="_blank" style="font-weight:normal;"><?php the_field('address', 'option'); ?>, <?php the_field('city', 'option'); ?>, <?php the_field('state', 'option'); ?> <?php the_field('zip', 'option'); ?></a></p>
         </div>
       </div>
 
