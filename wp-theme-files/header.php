@@ -112,9 +112,9 @@
             $hero_link_2 = get_field('hero_link_2');
           ?>
           <?php if($hero_link_1): ?>
-            <a href="<?php echo esc_url($hero_link_1['url']); ?>" class="chevron"><?php echo esc_html($hero_link_1['title']); ?></a>
+            <a href="<?php echo esc_url($hero_link_1['url']); ?>" class="chevron" target="<?php echo $hero_link_1['target'] ? esc_attr($hero_link_1['target']) : '_self'; ?>"><?php echo esc_html($hero_link_1['title']); ?></a>
           <?php endif; if($hero_link_2): ?>
-            <a href="<?php echo esc_url($hero_link_2['url']); ?>" class="chevron"><?php echo esc_html($hero_link_2['title']); ?></a>
+            <a href="<?php echo esc_url($hero_link_2['url']); ?>" class="chevron" target="<?php echo $hero_link_2['target'] ? esc_attr($hero_link_2['target']) : '_self'; ?>"><?php echo esc_html($hero_link_2['title']); ?></a>
           <?php endif; ?>
         </div>
       </div>
