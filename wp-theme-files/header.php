@@ -95,6 +95,17 @@
       $hero_image_css = get_field('hero_default_image_css', 'option');
     }
 
+    if(is_page('events')){
+      $events_page = get_page_by_path('events');
+      $events_page_id = $events_page->ID;
+
+      $events_hero_image = get_field('hero_image', $events_page_id);
+      if($events_hero_image){
+        $hero_image = $events_hero_image;
+        $hero_image_css = get_field('hero_image_css', $events_page_id);
+      }
+    }
+
     $hero_title = get_field('hero_title');
     if(!$hero_title){
       $hero_title = get_the_title();
