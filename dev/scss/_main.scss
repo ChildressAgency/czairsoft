@@ -418,3 +418,38 @@ section{
     }
   }
 }
+
+.event-hilight{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #000;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 1;
+  }
+
+  .event-hilight-caption{
+    text-align: center;
+    color: #fff;
+    position: relative; 
+    z-index: 5;
+
+    h2{
+      font-size: 60px;
+    }
+    p{
+      font-size: 20px;
+    }
+  }
+}
